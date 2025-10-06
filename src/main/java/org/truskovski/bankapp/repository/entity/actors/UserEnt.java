@@ -1,9 +1,9 @@
-package org.truskovski.bankapp.repository.actors;
+package org.truskovski.bankapp.repository.entity.actors;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.truskovski.bankapp.repository.cards.Card;
-import org.truskovski.bankapp.repository.Roles;
+import org.truskovski.bankapp.repository.entity.cards.Card;
+import org.truskovski.bankapp.repository.entity.Roles;
 import java.util.List;
 
 @Entity
@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Users")
-public class User {
+public class UserEnt {
 
     @Id
     @Column(name = "user_id",nullable = false, updatable = false, unique = true)

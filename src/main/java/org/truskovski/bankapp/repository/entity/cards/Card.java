@@ -1,11 +1,11 @@
-package org.truskovski.bankapp.repository.cards;
+package org.truskovski.bankapp.repository.entity.cards;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.truskovski.bankapp.repository.actors.User;
+import org.truskovski.bankapp.repository.entity.actors.UserEnt;
 
 import java.math.BigDecimal;
 
@@ -30,6 +30,6 @@ public class Card {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private UserEnt userEnt;
 
 }
