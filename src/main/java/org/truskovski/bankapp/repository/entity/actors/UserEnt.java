@@ -4,7 +4,10 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.truskovski.bankapp.repository.entity.cards.Card;
 import org.truskovski.bankapp.repository.entity.Roles;
+
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -36,6 +39,6 @@ public class UserEnt {
             joinColumns = @JoinColumn(name = "user_id")
     )
     @Enumerated(EnumType.STRING)
-    @Column(name = "role")
-    public List<Roles> roles;
+    @Column(name = "roles")
+    public Set<String> roles = new HashSet<>();
 }

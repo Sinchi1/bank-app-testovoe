@@ -6,4 +6,5 @@ import org.truskovski.bankapp.repository.entity.actors.UserEnt;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserEnt, Long> {
+    UserEnt findByUsername(String username);
 }

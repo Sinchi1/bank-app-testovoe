@@ -5,6 +5,7 @@ import org.truskovski.bankapp.repository.entity.Roles;
 import org.truskovski.bankapp.repository.entity.cards.Card;
 
 import java.util.List;
+import java.util.Set;
 
 @Data
 public class UserDTO {
@@ -13,5 +14,5 @@ public class UserDTO {
     private String password;
     private String email;
     private List<Card> card;
-    public List<Roles> roles;
+    public Set<Roles> roles;
 }
